@@ -1,3 +1,4 @@
+import java.util.Scanner
 public class Facade {
     private int UserType;
     private Product theSelectedProduct;
