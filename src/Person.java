@@ -1,9 +1,9 @@
 public abstract class Person {
 
-    private ProductMenu theProductMenu;
-    Person(ProductMenu thePM)
+    protected static ProductMenu theProductMenu;
+    Person(ProductMenu theProductMenu)
     {
-        this.theProductMenu = thePM;
+        this.theProductMenu = theProductMenu;
     }
 
     public abstract void showMenu();

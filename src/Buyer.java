@@ -1,11 +1,16 @@
 public class Buyer extends Person
 {
     private ProductMenu theProduct;
-
-    Buyer(ProductMenu thePM)
+    Person person;
+    Buyer()
     {
-        super(thePM);
-        this.theProduct = thePM;
+        super(theProductMenu);
+    }
+
+    Buyer(ProductMenu theProductMenu)
+    {
+        super(theProductMenu);
+        this.theProduct = theProductMenu;
     }
     public void showMenu()
     {
