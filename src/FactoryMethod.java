@@ -1,17 +1,16 @@
 public class FactoryMethod
 {
 
-    public Person getProdObject(String choice)
+    public static Person getProdObject(String choice)
     {
-        Person person;
+
         if(choice.equalsIgnoreCase("Buyer"))
         {
-            person = new Buyer();
+            return new Buyer();
         }
         else
         {
-            person =  new Seller();
+            return new Seller();
         }
-        return person;
     }
 }
