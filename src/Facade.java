@@ -3,13 +3,10 @@ public class Facade {
     String UserName;
     String Password;
     private int UserType;
-    private Product theSelectedProduct;
+    private String theSelectedProduct;
     private int nProductCategory;
     private ProductList theProductList;
     private Person thePerson;
-
-    public Facade() {
-    }
 
     public int login()
     {
@@ -35,6 +32,14 @@ public class Facade {
         {
             UserType = 1;
         }
+        else if((UserName.equalsIgnoreCase("buyer")))
+        {
+            UserType = 0;
+        }
+        else if((UserName.equalsIgnoreCase("seller")))
+        {
+            UserType = 1;
+        }
         else
         {
             System.out.println("No such user found !!!");
@@ -56,9 +61,19 @@ public class Facade {
 
     }
 
-    public Product SelectProduct(){
-
+    public String SelectProduct()
+    {
+        System.out.println("Please choose one product from the following product menu : ");
+        System.out.println("A. Meat Product \n B. Produce Product");
+        Scanner scan = new Scanner(System.in);
+        theSelectedProduct = scan.nextLine();
+        return theSelectedProduct;
     }
+    public void createProdObj(ProductMenu pm, int UserType)
+    {
+        pm.assignPerson(UserType);
+    }
+
 
     public void productOperation(){
 
@@ -90,6 +105,23 @@ public class Facade {
 
     public void begin()
     {
+        UserType = login();
+        theSelectedProduct = SelectProduct();
+        if((theSelectedProduct.equalsIgnoreCase("Meat Product")))
+        {
+            createProdObj(new MeatProductMenu(),UserType);
+        }
+        else if((theSelectedProduct.equalsIgnoreCase("Produce Product")))
+        {
+            createProdObj(new ProduceProductMenu(), UserType);
+        }
+        else
+        {
+            System.out.println("No such option is available in the Menu !!!");
+            System.exit(-1);
+        }
+
+
 
     }
 

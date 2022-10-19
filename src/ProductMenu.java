@@ -1,6 +1,8 @@
 public interface ProductMenu {
         public abstract void showMenu();
 
+        public abstract void assignPerson(int usertype);
+
         public abstract void showAddButton();
 
         public abstract void showViewButton();
@@ -12,4 +14,5 @@ public interface ProductMenu {
         public abstract void showComboxes();
 
 }
+
 
