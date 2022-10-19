@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.Scanner;
 public class Facade {
     private int UserType;
     private Product theSelectedProduct;
@@ -6,13 +6,14 @@ public class Facade {
     private ProductList theProductList;
     private Person thePerson;
 
-    public boolean login(){
-
+    public boolean login(LoginForUser l)
+    {
+        UserType = l.login();
+        return true;
     }
 
     public void createUser(UserInfoItem userinfoitem)
     {
-
     }
 
     public void createProductList(){
