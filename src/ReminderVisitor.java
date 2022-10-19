@@ -1,13 +1,15 @@
 public class ReminderVisitor extends NodeVisitor{
     private Reminder m_Reminder;
-    public void visitProduct(Product product)
+    public Reminder visitProduct(Product product)
     {
-
+        return m_Reminder;
     }
-    public void visitTrading(Trading trading){
-
+    public Reminder visitTrading(Trading trading)
+    {
+        return m_Reminder;
     }
-    public void visitFacade(Facade facade){
+    public void visitFacade(Facade facade)
+    {
 
     }
 

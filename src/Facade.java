@@ -6,10 +6,9 @@ public class Facade {
     private ProductList theProductList;
     private Person thePerson;
 
-    public boolean login(LoginForUser l)
+    public int login(LoginForUser l)
     {
-        UserType = l.login();
-        return true;
+        return l.login();
     }
 
     public void createUser(UserInfoItem userinfoitem)
