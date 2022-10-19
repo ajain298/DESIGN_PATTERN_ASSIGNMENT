@@ -7,6 +7,12 @@ public class Facade {
     private int nProductCategory;
     private ProductList theProductList;
     private Person thePerson;
+    Iterator I1;
+    Iterator I2;
+    ProductList PL;
+    ProductIterator p;
+    OfferingList OL;
+    OfferingIterator o;
 
     public int login()
     {
@@ -119,6 +125,16 @@ public class Facade {
         {
             System.out.println("No such option is available in the Menu !!!");
             System.exit(-1);
+        }
+        PL = new ProductList();
+        OL = new OfferingList();
+
+        Iterator I2 = OL.getIterator();
+        for(I1 = PL.getIterator();p.hasNext(I1);)
+        {
+            System.out.println(p.Nextp(I1));
+            System.out.println(o.Nexto(I2));
+
         }
 
 
