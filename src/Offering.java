@@ -1,2 +1,4 @@
-public class Offering {
+public class Offering
+{
+
 }
