@@ -1,6 +1,5 @@
 public class OfferingIterator implements Iterator
 {
-
     public boolean hasNext(Iterator I)
     {
         return I.hasNext(I);
