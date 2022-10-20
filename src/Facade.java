@@ -71,7 +71,6 @@ public class Facade {
         ReminderVisitor r = new ReminderVisitor();
         pl.accept(r);
         t.accept(r);
-
     }
 
     public void begin()

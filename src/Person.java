@@ -5,21 +5,6 @@ public abstract class Person {
     {
         this.theProductMenu = theProductMenu;
     }
-
-    public abstract void showMenu();
-    public abstract ProductMenu CreateProductMenu();
-    public void showAddButton(){
-
-    }
-    public void showViewButton(){
-
-    }
-    public void showRadioButton(){
-
-    }
-    public void showLabels(){
-
-    }
-
+    public abstract ProductMenu CreateProductMenu(String s);
 
 }
