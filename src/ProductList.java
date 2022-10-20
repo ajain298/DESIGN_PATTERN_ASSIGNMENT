@@ -1,5 +1,5 @@
 import java.util.List;
-public class ProductList extends Reminder
+public class ProductList extends Reminder implements ProductMenu
 {
     List<Product> prod;
     public Iterator getIterator(String ty)
@@ -11,4 +11,17 @@ public class ProductList extends Reminder
         return visitor.visitProduct(this);
 
     }
+    public void assignPerson(int usertype)
+    {
+
+    }
+    public void addProduct(Product p)
+    {
+
+    }
+    public ProductIterator iterator(String type)
+    {
+        return null;
+    }
+
 }

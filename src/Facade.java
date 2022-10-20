@@ -4,8 +4,8 @@ public class Facade {
     String Password;
     private int UserType;
     private String theSelectedProduct;
-    ProductMenu products;
-    OfferMenu offerings;
+    ProductMenu products = new ProductList();
+    OfferMenu offerings = new OfferingList();
 
     public int login()
     {
