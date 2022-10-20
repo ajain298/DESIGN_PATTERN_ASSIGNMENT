@@ -17,16 +17,5 @@ public class OfferingIterator implements Iterator
     {
         return null;
     }
-    public void MoveToHead(Iterator I)
-    {
 
-    }
-    public void Remove(Iterator I)
-    {
-        if(this.hasNext(I))
-        {
-            I.Nexto(I);
-        }
-
-    }
 }

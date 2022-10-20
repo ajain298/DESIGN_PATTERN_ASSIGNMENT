@@ -5,12 +5,6 @@ public class Seller extends Person
     {
         super(theProductMenu);
     }
-
-    public void showMenu()
-    {
-        System.out.println("The product items for the Seller : ");
-
-    }
     public ProductMenu CreateProductMenu(String p)
     {
 

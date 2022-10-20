@@ -2,13 +2,13 @@ import java.util.Scanner;
 public class Facade {
     String UserName;
     String Password;
-    String[] s;
     private int UserType;
+    boolean i;
     private String theSelectedProduct;
     Iterator I1;
     Iterator I2;
-    ProductList PL, type_list;
     ProductIterator p;
+    ProductList PL;
     OfferingList OL;
     OfferingIterator o;
 
@@ -88,22 +88,17 @@ public class Facade {
         {
             createProdObj(new ProduceProductMenu(), UserType);
         }
-        else
-        {
+        else {
             System.out.println("No such option is available in the Menu !!!");
             System.exit(-1);
-        }
-        s = type_list.List(theSelectedProduct);
-        for(String l : s)
-        {
-            System.out.println(l);
         }
         remind();
         PL = new ProductList();
         OL = new OfferingList();
         I1 = PL.getIterator();
         I2 = OL.getIterator();
-        while(p.hasNext(I1))
+        i = p.hasNext(I1);
+        while(i)
         {
             System.out.println(p.Nextp(I1));
             System.out.println(o.Nexto(I2));
