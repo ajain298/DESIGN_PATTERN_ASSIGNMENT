@@ -1,3 +1,4 @@
+
 public class ProductIterator implements Iterator{
 
     public boolean hasNext(Iterator I)

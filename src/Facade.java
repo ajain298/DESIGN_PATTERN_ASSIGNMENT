@@ -132,9 +132,9 @@ public class Facade {
         }
         PL = new ProductList();
         OL = new OfferingList();
-
-        Iterator I2 = OL.getIterator();
-        for(I1 = PL.getIterator();p.hasNext(I1);)
+        I1 = PL.getIterator();
+        I2 = OL.getIterator();
+        while(p.hasNext(I1))
         {
             System.out.println(p.Nextp(I1));
             System.out.println(o.Nexto(I2));
