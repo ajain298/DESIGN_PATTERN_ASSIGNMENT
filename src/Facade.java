@@ -105,7 +105,11 @@ public class Facade {
 
     }
 
-    public void remind(){
+    public void remind()
+    {
+        ProductList pl = new ProductList();
+        ReminderVisitor r = new ReminderVisitor();
+        pl.accept(r);
 
     }
 
@@ -136,7 +140,7 @@ public class Facade {
             System.out.println(o.Nexto(I2));
 
         }
-
+        remind();
 
 
     }
