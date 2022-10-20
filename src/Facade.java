@@ -132,7 +132,6 @@ public class Facade {
         Iterator I2 = OL.getIterator();
         for(I1 = PL.getIterator();p.hasNext(I1);)
         {
-            //String s = (String) p.Nextp(I1);
             System.out.println(p.Nextp(I1));
             System.out.println(o.Nexto(I2));
 
