@@ -108,8 +108,10 @@ public class Facade {
     public void remind()
     {
         ProductList pl = new ProductList();
+        Trading t = new Trading();
         ReminderVisitor r = new ReminderVisitor();
         pl.accept(r);
+        t.accept(r);
 
     }
 

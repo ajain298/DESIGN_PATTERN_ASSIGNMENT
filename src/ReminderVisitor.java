@@ -2,16 +2,16 @@ public class ReminderVisitor extends NodeVisitor{
     private Reminder m_Reminder;
     public Reminder visitProduct(ProductList product)
     {
-        System.out.println("Displaying product");
+        System.out.println("Product list accessed");
         return product;
     }
     public void visitTrading(Trading trading)
     {
-        System.out.println("Displaying trading");
+        System.out.println("Finding out Trading information");
     }
     public void visitFacade(Facade facade)
     {
-        System.out.println("Displaying facade");
+        System.out.println();
     }
 
 }
