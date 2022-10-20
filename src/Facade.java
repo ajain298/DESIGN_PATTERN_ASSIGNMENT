@@ -4,9 +4,6 @@ public class Facade {
     String Password;
     private int UserType;
     private String theSelectedProduct;
-    private int nProductCategory;
-    private ProductList theProductList;
-    private Person thePerson;
     Iterator I1;
     Iterator I2;
     ProductList PL;
@@ -55,18 +52,6 @@ public class Facade {
 
     }
 
-    public void createUser(UserInfoItem userinfoitem)
-    {
-    }
-
-    public void createProductList(){
-
-    }
-
-    public void AttachProductToUser(){
-
-    }
-
     public String SelectProduct()
     {
         System.out.println("Please choose one product from the following product menu : ");
@@ -79,32 +64,6 @@ public class Facade {
     {
         pm.assignPerson(UserType);
     }
-
-
-    public void productOperation(){
-
-    }
-
-    public void addTrading(){
-
-    }
-
-    public void viewTrading(){
-
-    }
-
-    public void decideBidding(){
-
-    }
-
-    public void discussBidding(){
-
-    }
-
-    public void submitBidding(){
-
-    }
-
     public void remind()
     {
         ProductList pl = new ProductList();

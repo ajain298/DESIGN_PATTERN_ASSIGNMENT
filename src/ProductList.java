@@ -1,12 +1,7 @@
 public class ProductList extends Reminder
 {
-    public String[][] ProdList = {
-            {"Meat","Beef"},
-            {"Meat","Pork"},
-            {"Meat","Mutton"},
-            {"Produce","Tomato"},
-            {"Produce","Onion"}
-    };
+    public String ProdList1[]= {"Beef","Pork", "Mutton"};
+    public String ProdList2[] = {"Tomato","Onion"};
     public Iterator getIterator()
     {
         return new ProductIterator();

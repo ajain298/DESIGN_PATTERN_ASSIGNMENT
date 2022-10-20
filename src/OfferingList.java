@@ -1,14 +1,9 @@
 public class OfferingList
 {
-    public String[][] OfferList = {
-            {"tutu","Beef"},
-            {"tutu","Tomato"},
-            {"mimi","Beef"},
-            {"mimi","Onion"},
-            {"pepe","Beef"},
-            {"pepe","Tomato"},
-            {"pepe","Onion"}
-    };
+    public String OfferList1[] = {"Beef","Tomato"};
+    public String OfferList2[] = {"Beef","Onion"};
+    public String OfferList3[] = {"Beef","Tomato","Onion"};
+
     public Iterator getIterator()
     {
         return new OfferingIterator();
