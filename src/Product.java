@@ -1,17 +1,19 @@
 public class Product
 {
-    public static String ProdList1[]= {"Beef","Pork", "Mutton"};
-    public static String ProdList2[] = {"Tomato","Onion"};
-
-    static String[] List(String type)
+    String p;
+    String type;
+    Product(String prod, String t)
     {
-        if((type.equalsIgnoreCase("Meat product")))
-        {
-            return ProdList1;
-        }
-        else
-        {
-            return ProdList2;
-        }
+        this.p = prod;
+        this.type = t;
     }
+    String getCategory()
+    {
+        return type;
+    }
+    String showMenu()
+    {
+        return this.p;
+    }
+
 }

@@ -1,9 +1,10 @@
+import java.util.List;
 public class OfferingList
 {
-    public Iterator getIterator()
+    List<Offering> offer;
+    public Iterator getIterator(String userName)
     {
-        return new OfferingIterator();
+        return new OfferingIterator(userName, this.offer);
     }
-
 
 }

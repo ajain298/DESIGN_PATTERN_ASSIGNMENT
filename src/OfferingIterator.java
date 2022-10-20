@@ -1,21 +1,39 @@
+import java.util.List;
 public class OfferingIterator implements Iterator
 {
-    public boolean hasNext(Iterator I)
+    String user_name;
+    public List<Offering>o;
+    int index;
+    OfferingIterator(String n, List<Offering>offer)
     {
-        return I.hasNext(I);
+        this.user_name = n;
+        this.o= offer;
     }
-    public Offering Nexto(Iterator I)
+
+    public boolean hasNext()
     {
-        if(this.hasNext(I))
+        while(index<o.size())
         {
-            return I.Nexto(I);
+            Offering o1 = o.get(index);
+            if(o1.getUser().equals(user_name))
+            {
+                return true;
+            }
+            else
+                index++;
         }
-        else
-            return null;
+        return false;
     }
-    public Product Nextp(Iterator I)
+    public Product Nextp()
     {
         return null;
+    }
+    public Offering Nexto()
+    {
+        Offering o1 = o.get(index);
+        index++;
+        return o1;
+
     }
 
 }

@@ -1,28 +1,39 @@
-
+import java.util.List;
 public class ProductIterator implements Iterator
 {
-    public boolean hasNext(Iterator I)
+    String type;
+    public List<Product> p;
+    int index;
+    ProductIterator(String ty, List<Product>prod)
     {
-            return I.hasNext(I);
+        this.type = ty;
+        this.p = prod;
     }
-    public Product Nextp(Iterator I)
+
+    public boolean hasNext()
     {
-        if(this.hasNext(I))
+        while(index<p.size())
         {
-            return I.Nextp(I);
+            Product p1 = p.get(index);
+            if(p1.getCategory().equals(type))
+            {
+                return true;
+            }
+            else
+                index++;
         }
-        else
-            return null;
+        return false;
     }
-    public Offering Nexto(Iterator I)
+    public Product Nextp()
+    {
+        Product p1 = p.get(index);
+        index++;
+        return p1;
+
+    }
+    public Offering Nexto()
     {
         return null;
     }
-    public void Remove(Iterator I)
-    {
-        if(this.hasNext(I))
-        {
-            I.Nextp(I);
-        }
-    }
+
 }

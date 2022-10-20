@@ -13,4 +13,16 @@ public class MeatProductMenu implements ProductMenu
         }
     }
 
+    @Override
+    public void addProduct(Product p)
+    {
+        System.out.println();
+    }
+
+    @Override
+    public ProductIterator iterator(String type)
+    {
+        return null;
+    }
+
 }

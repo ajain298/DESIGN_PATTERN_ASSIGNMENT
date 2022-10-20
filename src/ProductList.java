@@ -1,8 +1,10 @@
+import java.util.List;
 public class ProductList extends Reminder
 {
-    public Iterator getIterator()
+    List<Product> prod;
+    public Iterator getIterator(String ty)
     {
-        return new ProductIterator();
+        return new ProductIterator(ty, this.prod);
     }
 
     public Reminder accept(NodeVisitor visitor) {

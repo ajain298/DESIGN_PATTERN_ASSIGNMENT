@@ -3,14 +3,9 @@ public class Facade {
     String UserName;
     String Password;
     private int UserType;
-    boolean i;
     private String theSelectedProduct;
-    Iterator I1;
-    Iterator I2;
-    ProductIterator p;
-    ProductList PL;
-    OfferingList OL;
-    OfferingIterator o;
+    ProductMenu products;
+    OfferMenu offerings;
 
     public int login()
     {
@@ -65,6 +60,27 @@ public class Facade {
     {
         pm.assignPerson(UserType);
     }
+
+    public ProductMenu addProd()
+    {
+        products.addProduct(new Product("Beef","Meat"));
+        products.addProduct(new Product("Pork","Meat"));
+        products.addProduct(new Product("Mutton","Meat"));
+        products.addProduct(new Product("Tomato","Produce"));
+        products.addProduct(new Product("Onion","Produce"));
+        return products;
+    }
+    public OfferMenu addOffer()
+    {
+        offerings.addOffering(new Offering("Beef","tutu"));
+        offerings.addOffering(new Offering("Tomato","tutu"));
+        offerings.addOffering(new Offering("Beef","mimi"));
+        offerings.addOffering(new Offering("Onion","mimi"));
+        offerings.addOffering(new Offering("Beef","pepe"));
+        offerings.addOffering(new Offering("Tomato","pepe"));
+        offerings.addOffering(new Offering("Onion","pepe"));
+        return offerings;
+    }
     public void remind()
     {
         ProductList pl = new ProductList();
@@ -93,18 +109,21 @@ public class Facade {
             System.exit(-1);
         }
         remind();
-        PL = new ProductList();
-        OL = new OfferingList();
-        I1 = PL.getIterator();
-        I2 = OL.getIterator();
-        i = p.hasNext(I1);
-        while(i)
+        ProductMenu prod = addProd();
+        OfferMenu offering = addOffer();
+        Iterator I_prod = prod.iterator(theSelectedProduct);
+        while(I_prod.hasNext())
         {
-            System.out.println(p.Nextp(I1));
-            System.out.println(o.Nexto(I2));
-
+            Product p = I_prod.Nextp();
+            System.out.println(p.showMenu());
         }
+        Iterator I_offering = offering.iterator(UserName);
+        while(I_offering.hasNext())
+        {
+            Offering o = I_offering.Nexto();
+            System.out.println(o.showMenu());
+        }
+        System.out.println("Thank you");
     }
-
 
 }

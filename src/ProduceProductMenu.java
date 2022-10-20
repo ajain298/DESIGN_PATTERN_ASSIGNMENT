@@ -14,4 +14,12 @@ public class ProduceProductMenu implements ProductMenu
             p = FactoryMethod.getProdObject("Seller");
         }
     }
+    public void addProduct(Product p)
+    {
+        System.out.println();
+    }
+    public ProductIterator iterator(String type)
+    {
+        return null;
+    }
 }
