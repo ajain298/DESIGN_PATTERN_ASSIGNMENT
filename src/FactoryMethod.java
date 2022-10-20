@@ -1,6 +1,5 @@
 public class FactoryMethod
 {
-
     public static Person getProdObject(String choice)
     {
         if(choice.equalsIgnoreCase("Buyer"))

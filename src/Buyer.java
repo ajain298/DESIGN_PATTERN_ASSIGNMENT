@@ -4,11 +4,6 @@ public class Buyer extends Person
     {
         super(theProductMenu);
     }
-    public void showMenu()
-    {
-        System.out.println("The product items for the Buyer : ");
-
-    }
     public ProductMenu CreateProductMenu(String p)
     {
         if(p.equalsIgnoreCase("Meat Product"))
