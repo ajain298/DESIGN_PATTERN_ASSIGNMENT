@@ -115,7 +115,9 @@ public class Facade {
 
     public void begin()
     {
+        System.out.println("WELCOME !!!");
         UserType = login();
+        System.out.println("Successfully running Facade pattern");
         theSelectedProduct = SelectProduct();
         if((theSelectedProduct.equalsIgnoreCase("Meat Product")))
         {
@@ -130,6 +132,7 @@ public class Facade {
             System.out.println("No such option is available in the Menu !!!");
             System.exit(-1);
         }
+        remind();
         PL = new ProductList();
         OL = new OfferingList();
         I1 = PL.getIterator();
@@ -140,7 +143,7 @@ public class Facade {
             System.out.println(o.Nexto(I2));
 
         }
-        remind();
+
 
 
     }

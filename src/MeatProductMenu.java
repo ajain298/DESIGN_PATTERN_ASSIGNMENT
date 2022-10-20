@@ -3,6 +3,8 @@ public class MeatProductMenu implements ProductMenu
     public void assignPerson(int usertype)
     {
         Person p;
+        System.out.println("Successfully implemented Bridge design pattern");
+        System.out.println("Successfully implemented Factory method design pattern");
         if(usertype == 0)
         {
             p = FactoryMethod.getProdObject("Buyer");

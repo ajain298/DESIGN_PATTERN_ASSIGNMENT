@@ -14,7 +14,8 @@ public class ProductList extends Reminder
 
     public Reminder accept(NodeVisitor visitor)
     {
-      return visitor.visitProduct(this);
+        System.out.println("Successfully implemented Visitor design pattern");
+        return visitor.visitProduct(this);
 
     }
 }
