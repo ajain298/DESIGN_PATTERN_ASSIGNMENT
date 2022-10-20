@@ -2,11 +2,12 @@ import java.util.Scanner;
 public class Facade {
     String UserName;
     String Password;
+    String[] s;
     private int UserType;
     private String theSelectedProduct;
     Iterator I1;
     Iterator I2;
-    ProductList PL;
+    ProductList PL, type_list;
     ProductIterator p;
     OfferingList OL;
     OfferingIterator o;
@@ -92,6 +93,11 @@ public class Facade {
             System.out.println("No such option is available in the Menu !!!");
             System.exit(-1);
         }
+        s = type_list.List(theSelectedProduct);
+        for(String l : s)
+        {
+            System.out.println(l);
+        }
         remind();
         PL = new ProductList();
         OL = new OfferingList();
@@ -103,9 +109,6 @@ public class Facade {
             System.out.println(o.Nexto(I2));
 
         }
-
-
-
     }
 
 

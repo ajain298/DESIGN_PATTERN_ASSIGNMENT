@@ -1,7 +1,7 @@
 public class ProductList extends Reminder
 {
-    public String ProdList1[]= {"Beef","Pork", "Mutton"};
-    public String ProdList2[] = {"Tomato","Onion"};
+    public static String ProdList1[]= {"Beef","Pork", "Mutton"};
+    public static String ProdList2[] = {"Tomato","Onion"};
     public Iterator getIterator()
     {
         return new ProductIterator();
@@ -9,9 +9,19 @@ public class ProductList extends Reminder
 
     public Reminder accept(NodeVisitor visitor)
     {
-        System.out.println("Successfully implemented Visitor design pattern");
         return visitor.visitProduct(this);
 
+    }
+    static String[] List(String type)
+    {
+        if((type.equalsIgnoreCase("Meat product")))
+        {
+            return ProdList1;
+        }
+        else
+        {
+            return ProdList2;
+        }
     }
 
 

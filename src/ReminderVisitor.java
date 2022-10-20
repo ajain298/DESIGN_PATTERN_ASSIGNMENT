@@ -1,5 +1,6 @@
-public class ReminderVisitor extends NodeVisitor{
-    private Reminder m_Reminder;
+public class ReminderVisitor extends NodeVisitor
+{
+
     public Reminder visitProduct(ProductList product)
     {
         System.out.println("Product list accessed");
