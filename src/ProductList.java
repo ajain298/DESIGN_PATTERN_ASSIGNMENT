@@ -12,8 +12,9 @@ public class ProductList extends Reminder
         return new ProductIterator();
     }
 
-    public void accept(NodeVisitor visitor)
+    public Reminder accept(NodeVisitor visitor)
     {
+      return visitor.visitProduct(this);
 
     }
 }
